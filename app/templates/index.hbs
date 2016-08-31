@@ -1,0 +1,18 @@
+<h1>ElixirCave</h1>
+
+{{#each classified as |classified|}}
+
+  <strong>Title: </strong> {{ classified.title }}
+  <br/>
+  <img src="{{ classified.logo }}" />
+  <br/>
+  <strong>Company: </strong> {{ classified.company }}
+  <br/>
+  <strong>Content:</strong>
+  <br/> {{{markdown-decode classified.content }}}
+  <br/>
+  <a href="{{ classified.url_apply }}" target="_blank">See the classified</a>
+
+
+  <hr>
+{{/each}}
