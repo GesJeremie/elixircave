@@ -1,18 +1,35 @@
-<h1>ElixirCave</h1>
+<div class="header__container">
+  <div class="container">
+    <div class="header__title">We hunt for Elixir Jobs ... so you don't have to!</div>
+  </div>
+</div>
 
-{{#each classified as |classified|}}
+<div class="container">
+  <div class="section__container">
+    <h3 class="section__title">Jobs Hunted</h3>
+  </div>
+</div>
+<div class="container">
 
-  <strong>Title: </strong> {{ classified.title }}
-  <br/>
-  <img src="{{ classified.logo }}" />
-  <br/>
-  <strong>Company: </strong> {{ classified.company }}
-  <br/>
-  <strong>Content:</strong>
-  <br/> {{{markdown-decode classified.content }}}
-  <br/>
-  <a href="{{ classified.url_apply }}" target="_blank">See the classified</a>
+  {{#each classified as |classified|}}
+    <div class="post__container">
 
+      <div class="gr-6">
+        <div class="post__title">{{ classified.title }}</div>
+        <div class="post__company">{{ classified.company }}</div>
+      </div>
+      <div class="gr-4">
+        <a href="{{ classified.url_apply}}" target="_blank">{{ classified.url_apply}}</a>
+        <br/> {{ classified.content }}
+      </div>
+      <div class="gr-2">
+        <div class="post__date">{{humanize-date classified.date }}</div>
 
-  <hr>
-{{/each}}
+      </div>
+      <div class="clear"></div>
+    </div>
+  {{/each}}
+
+</div>
+
+<div class="+spacer-large"></div>

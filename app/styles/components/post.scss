@@ -1,0 +1,36 @@
+@include component(post) {
+
+  @include part(container) {
+    padding: 1em;
+    border-bottom: 1px solid #E0E0EA;
+    border-left: 1px solid #E0E0EA;
+    border-right: 1px solid #E0E0EA;
+    background-color: $color-grey;
+
+    &:first-of-type {
+      border-top: 1px solid #E0E0EA;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:hover {
+      background-color: darken($color-grey, 3%);
+      cursor: pointer;
+    }
+  }
+
+  @include part(title) {
+    color: #2D3941;
+    font-weight: bold;
+  }
+
+  @include part(company) {
+    color: darken($color-grey, 40%);
+  }
+
+}

@@ -1,0 +1,15 @@
+@include component(section) {
+
+  @include part(container) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  @include part(title) {
+    font-size: 1.8em;
+    text-align: left;
+    color: #2D3941;
+    font-weight: bold;
+  }
+
+}
