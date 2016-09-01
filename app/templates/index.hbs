@@ -6,7 +6,29 @@
 
 <div class="container">
   <div class="section__container">
+    <div class="section__email">
+      <form {{action "subscribe" on="submit"}}>
+        <div class="gr-4">
+          <div class="section__description">Get a weekly email of all new jobs</div>
+        </div>
+        <div class="gr-2">
+          {{input type="text" value=email placeholder="Email"}}
+        </div>
+        <div class="gr-2">
+          {{input type="text" value=firstname placeholder="First Name"}}
+        </div>
+        <div class="gr-2">
+          {{input type="text" value=lastname placeholder="Last Name"}}
+        </div>
+        <div class="gr-2">
+          <button type="submit" class="{{unless isFormValid "--disabled"}}" disabled= {{disabledButton}}>{{ subscribeText }}</button>
+        </div>
+        <div class="clear"></div>
+      </form>
+
+    </div>
     <h3 class="section__title">Jobs Hunted</h3>
+
   </div>
 </div>
 <div class="container">

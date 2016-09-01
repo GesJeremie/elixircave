@@ -12,4 +12,71 @@
     font-weight: bold;
   }
 
+  @include part(email) {
+    margin-top: 1em;
+    border-radius: 5px;
+    padding: 1em;
+    border: 1px solid #E0E0EA;
+    color: #3E4651;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+
+    input {
+      border: none;
+      background-color: white;
+      font-size: 0.7em;
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border-radius: 5px;
+      font-weight: bold;
+      outline: 0;
+      border: 2px solid darken(#3E4651, 5%);
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background-color: #FC575E;
+      color: white;
+      margin-top: 0.15em;
+      padding: 0.8em;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.8em;
+      outline: 0;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome */
+      color: #3E4651;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+      color: #3E4651;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: #3E4651;
+      opacity: 1;
+    }
+
+    :-moz-placeholder { /* Firefox 4 - 18 */
+      color: #3E4651;
+      opacity: 1;
+    }
+
+  }
+
+  @include part(description) {
+    padding-top: 0.5em;
+  }
+
 }
