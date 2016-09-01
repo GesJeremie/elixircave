@@ -11,25 +11,41 @@
 </div>
 <div class="container">
 
-  {{#each classified as |classified|}}
-    <div class="post__container">
+  {{#each classified as |post|}}
+    <div class="post__container" {{action "toggleShow" post on="click"}}>
 
       <div class="gr-6">
-        <div class="post__title">{{ classified.title }}</div>
-        <div class="post__company">{{ classified.company }}</div>
+        <div class="post__title">{{ post.title }}</div>
+        <div class="post__company">{{if-empty post.company }}</div>
       </div>
       <div class="gr-4">
-        <a href="{{ classified.url_apply}}" target="_blank">{{ classified.url_apply}}</a>
-        <br/> {{ classified.content }}
+        <div class="post__location"><i class="icon-location"></i> {{if-empty post.location }}</div>
       </div>
       <div class="gr-2">
-        <div class="post__date">{{humanize-date classified.date }}</div>
+        <div class="post__date"><i class="icon-clock"></i> {{humanize-date post.date }}</div>
 
       </div>
       <div class="clear"></div>
+
+      {{#if post.visible}}
+        {{#if post.logo}}
+          <div class="post__logo"><img src="{{ post.logo }}" /></div>
+        {{/if}}
+        <div class="post__content">
+          {{{markdown-decode post.content}}}
+        </div>
+      {{/if}}
     </div>
+
+    {{#if post.visible}}
+      <div class="post__apply">
+        <a href="{{ post.apply }}" target="_blank">Apply for this job</a>
+      </div>
+    {{/if}}
   {{/each}}
 
 </div>
 
 <div class="+spacer-large"></div>
+
+<div class="footer__sword"><img src="/assets/images/elixir.png" /></div>
