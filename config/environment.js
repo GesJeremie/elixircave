@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'elixircave',
     environment: environment,
@@ -16,6 +16,13 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    firebase: {
+      apiKey: 'AIzaSyAFEB8gbc6iuIm32WcOUDLipfIOml8CyQY',
+      authDomain: 'elixir-cave.firebaseapp.com',
+      databaseURL: 'https://elixir-cave.firebaseio.com',
+      storageBucket: '',
     }
   };
 
