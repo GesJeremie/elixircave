@@ -2,8 +2,18 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function (defaults) {
+module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    dotEnv: {
+      clientAllowedKeys: [
+        'KEEN_PROJECT_ID', 'KEEN_WRITE_KEY', 'KEEN_READ_KEY',
+        'FIREBASE_API_KEY', 'FIREBASE_AUTH_DOMAIN', 'FIREBASE_DATABASE_URL'
+      ],
+      path: {
+        development: './.env.dev',
+        production: './.env.prod'
+      }
+    },
     sassOptions: {
       extension: 'scss',
       includePaths: [

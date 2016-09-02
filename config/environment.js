@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function (environment) {
+module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'elixircave',
     environment: environment,
@@ -19,12 +19,17 @@ module.exports = function (environment) {
     },
 
     firebase: {
-      apiKey: 'AIzaSyAFEB8gbc6iuIm32WcOUDLipfIOml8CyQY',
-      authDomain: 'elixir-cave.firebaseapp.com',
-      databaseURL: 'https://elixir-cave.firebaseio.com',
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      databaseURL: process.env.FIREBASE_DATABASE_URL,
       storageBucket: '',
     }
+
   };
+
+  ENV.keen = {
+    logRequests: true
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
