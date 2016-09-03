@@ -4,14 +4,12 @@
 // Fetch the dependencies (csstyle, gridle, helpers, etc.)
 //
 @import 'boot';
-
 // ===========================================================
 // Base
 // ===========================================================
 // Import general style elements, fonts, etc
 //
 @import 'app/base';
-
 // ===========================================================
 // Components
 // ===========================================================
@@ -21,3 +19,4 @@
 @import 'components/post';
 @import 'components/section';
 @import 'components/footer';
+@import 'components/stats';
