@@ -34,8 +34,13 @@ export default Ember.Controller.extend({
   },
 
   onApply(post) {
+
     this.get('keen').send('click-apply', {
       id: post.get('id'),
+      title: post.get('title')
+    });
+
+    $.get('https://hooks.zapier.com/hooks/catch/1645102/63i78w/', {
       title: post.get('title')
     });
 
