@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'elixircave',
+    modulePrefix: 'elixirhunt',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

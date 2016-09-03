@@ -34,7 +34,7 @@ export default Ember.Controller.extend({
   },
 
   onApply(post) {
-    this.get('keen').sendEvent('click-apply', {
+    this.get('keen').send('click-apply', {
       id: post.get('id'),
       title: post.get('title')
     });
