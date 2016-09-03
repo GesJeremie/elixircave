@@ -20,3 +20,6 @@ testem.log
 # config
 .env.dev
 .env.prod
+
+# dploy secrets
+dploy.yaml
