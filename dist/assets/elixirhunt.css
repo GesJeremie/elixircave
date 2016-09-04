@@ -548,10 +548,18 @@ body {
 .container {
   margin: 0 auto;
   max-width: 960px; }
+  @media screen and (max-width: 768px) {
+    .container {
+      margin-left: 1em;
+      margin-right: 1em; } }
 
 .container-fluid {
   margin: 0 auto;
   padding: 0 20px; }
+
+@media screen and (max-width: 768px) {
+  [class*="gr-"] {
+    width: 100%; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -710,6 +718,10 @@ input:-webkit-autofill {
   padding-left: 0.5em;
   padding-right: 0.5em;
   font-size: 0.8em; }
+  @media screen and (max-width: 768px) {
+    .post__location {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em; } }
   .post__location i {
     vertical-align: middle; }
 
@@ -801,6 +813,9 @@ input:-webkit-autofill {
     font-weight: bold;
     outline: 0;
     border: 2px solid #333a43; }
+    @media screen and (max-width: 768px) {
+      .section__email input {
+        margin-bottom: 1em; } }
   .section__email button {
     width: 100%;
     border: none;

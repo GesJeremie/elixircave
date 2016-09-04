@@ -20,7 +20,6 @@
 @import 'helpers/mixins';
 @import 'helpers/tweaks';
 
-
 // ===========================================================
 // Gridle
 // ===========================================================
@@ -34,10 +33,29 @@
 // Generate gridle css classes to use in our html
 @include gridle_generate_classes();
 
+// Register states
+@include gridle_register_state( xs, (
+    max-width : 768px
+) );
+@include gridle_register_state( sm , (
+    min-width : 768px
+) );
+@include gridle_register_state( md, (
+    min-width : 992px
+) );
+@include gridle_register_state( lg, (
+    min-width : 1200px
+) );
+
 // Basic container
 .container {
   margin: 0 auto;
   max-width: 960px;
+
+  @include gridle_state(xs) {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 // Fluid container (useful for navbars and stuff like that)
@@ -48,9 +66,10 @@
 
 // Mobile
 [class*="gr-"] {
-  @include gridle_set((mobile : (grid : 12, push : 0, pull : 0, prefix : 0, suffix : 0)));
+    @include gridle_state( xs ) {
+        @include gridle_grid( 12 );
+    }
 }
-
 
 // ===========================================================
 // Reset

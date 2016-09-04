@@ -44,6 +44,11 @@
     padding-right: 0.5em;
     font-size: 0.8em;
 
+    @include gridle_state(xs) {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
     i {
       vertical-align: middle;
     }

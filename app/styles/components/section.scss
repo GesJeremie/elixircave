@@ -21,6 +21,7 @@
     font-weight: bold;
     margin-bottom: 1.5em;
 
+
     input {
       border: none;
       background-color: white;
@@ -34,6 +35,10 @@
       font-weight: bold;
       outline: 0;
       border: 2px solid darken(#3E4651, 5%);
+
+      @include gridle_state(xs) {
+        margin-bottom: 1em;
+      }
     }
 
     button {
