@@ -83,13 +83,16 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 1em;
+    line-height: 1.7em;
+    padding-bottom: 1em;
+
     h2 {
       font-weight: bold;
-      font-size: 1em;
+      font-size: 1.1em;
     }
     h1 {
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
     strong {
       font-weight: bold;
@@ -98,6 +101,11 @@
       height: 15px;
       display: block;
       content: " ";
+    }
+    li {
+      list-style: disc;
+      list-style-position: inside;
+      padding-left: 1em;
     }
   }
 
