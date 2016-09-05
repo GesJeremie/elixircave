@@ -21,6 +21,9 @@
     font-weight: bold;
     margin-bottom: 1.5em;
 
+    @include gridle_state(xs) {
+      display: none;
+    }
 
     input {
       border: none;

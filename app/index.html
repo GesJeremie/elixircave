@@ -15,6 +15,22 @@
 </head>
 
 <body id="csstyle">
+
+  <div class="ember-load-indicator loader__container">
+    <div class="container">
+      <div class="gr-8 gr-centered">
+        <div class="gr-6">
+          <div class="loader__picture">
+            <img src="/assets/images/knight.png" />
+          </div>
+        </div>
+        <div class="gr-6">
+          <div class="loader__message">Hunting the job offers ...</div>
+          <div class="loader__spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   {{content-for "body"}}
 
   <script src="{{rootURL}}assets/vendor.js"></script>
