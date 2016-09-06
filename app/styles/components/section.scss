@@ -5,6 +5,44 @@
     margin-bottom: 2em;
   }
 
+  @include part(details) {
+    background-color: lighten(#FEDB1D, 40%);
+    color: #3E4651;
+    padding: 0.7em;
+    margin-top: 1em;
+    border-radius: 5px;
+    
+    a {
+      color: #3E4651;
+      font-weight: bold;
+    }
+  }
+
+  @include part(twitter) {
+    display: inline-block;
+    text-align: right;
+    background-color: #4099FF;
+    color: white;
+    padding: 0.4em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: darken(#4099FF, 12%);
+    }
+    
+    i {
+      vertical-align: middle;
+    }
+
+    @include gridle_state(xs) {
+      float: left;
+      margin-top: 0.7em;
+    }
+  }
+
   @include part(title) {
     font-size: 1.8em;
     text-align: left;
