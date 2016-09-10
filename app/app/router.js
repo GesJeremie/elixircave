@@ -8,6 +8,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('stats');
+
+  this.route('admin', function() {
+    this.route('jobs', function() {
+      this.route('new');
+      this.route('edit');
+    });
+  });
 });
 
 export default Router;

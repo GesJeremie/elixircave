@@ -7,5 +7,7 @@ export default DS.Model.extend({
   logo: DS.attr('string'),
   apply: DS.attr('string'),
   location: DS.attr('string'),
-  date: DS.attr('string')
+  date: DS.attr('string'),
+  createdAt: DS.attr('date'),
+  updatedAt: DS.attr('date')
 });

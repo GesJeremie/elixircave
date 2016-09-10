@@ -11,7 +11,8 @@ config :api, Api.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: []
+  watchers: [],
+  url: [host: "www.elixirhunt.dev", port: 4000]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
@@ -29,3 +30,7 @@ config :api, Api.Repo,
   database: "elixirhunt_dev",
   hostname: "localhost",
   pool_size: 10
+
+# Finally import the config/dev.secret.exs
+# which should be versioned separately.
+import_config "dev.secret.exs"
