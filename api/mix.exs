@@ -19,7 +19,7 @@ defmodule Api.Mixfile do
   def application do
     [mod: {Api, []},
      applications: [:phoenix, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httppoison]]
+                    :phoenix_ecto, :postgrex, :httpoison]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,7 +36,7 @@ defmodule Api.Mixfile do
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:faker_elixir_octopus, "> 0.0.0", only: :dev},
-      {:httpoison, "~> 0.9.0"}]
+     {:httpoison, "~> 0.9.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

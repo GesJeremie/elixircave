@@ -9,6 +9,6 @@ defmodule Api.Router do
     pipe_through :api
 
     resources "/posts", PostController, except: [:new, :edit]
-    get "/ifttt", IftttController
+    get "/ifttt/maker", IftttController, :maker
   end
 end
