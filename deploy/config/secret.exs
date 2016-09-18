@@ -1,0 +1,2 @@
+config :deploy,
+  hello: "world"
