@@ -1,1 +1,19 @@
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
+
+# Generate on crash by the VM
+erl_crash.dump
+
+# Secrets
+/config/prod.secret.exs
+/config/dev.secret.exs
+
+# Deployment
+.deliver
+rel/
+
 .DS_Store
+.deliver/releases/
