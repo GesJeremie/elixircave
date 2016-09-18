@@ -17,4 +17,4 @@ erl_crash.dump
 *.ez
 
 # Hide secret deploy
-/deploy/config/secret.exs
+/config/secret.exs
