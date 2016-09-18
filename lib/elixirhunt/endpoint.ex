@@ -1,14 +1,14 @@
-defmodule Api.Endpoint do
-  use Phoenix.Endpoint, otp_app: :api
+defmodule Elixirhunt.Endpoint do
+  use Phoenix.Endpoint, otp_app: :elixirhunt
 
-  socket "/socket", Api.UserSocket
+  #socket "/socket", Elixirhunt.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :api, gzip: false,
+    at: "/", from: :elixirhunt, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -30,8 +30,8 @@ defmodule Api.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_api_key",
+    key: "_elixirhunt_key",
     signing_salt: "ylFfvsiE"
 
-  plug Api.Router
+  plug Elixirhunt.Router
 end

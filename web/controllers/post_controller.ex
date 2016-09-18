@@ -1,7 +1,7 @@
-defmodule Api.PostController do
-  use Api.Web, :controller
+defmodule Elixirhunt.PostController do
+  use Elixirhunt.Web, :controller
 
-  alias Api.Post
+  alias Elixirhunt.Post
 
   plug :scrub_params, "post" when action in [:create, :update]
 
@@ -22,7 +22,7 @@ defmodule Api.PostController do
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(Api.ChangesetView, "error.json", changeset: changeset)
+        |> render(Elixirhunt.ChangesetView, "error.json", changeset: changeset)
     end
   end
 
@@ -41,7 +41,7 @@ defmodule Api.PostController do
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(Api.ChangesetView, "error.json", changeset: changeset)
+        |> render(Elixirhunt.ChangesetView, "error.json", changeset: changeset)
     end
   end
 

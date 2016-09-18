@@ -1,5 +1,5 @@
-defmodule Api.Router do
-  use Api.Web, :router
+defmodule Elixirhunt.Router do
+  use Elixirhunt.Web, :router
 
   pipeline :api do
     plug :accepts, ["json"]

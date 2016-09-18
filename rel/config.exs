@@ -13,11 +13,6 @@ use Mix.Releases.Config,
 # when building in that environment, this combination of release
 # and environment configuration is called a profile
 
-environment :dev do
-  set dev_mode: true
-  set include_erts: false
-end
-
 environment :prod do
   set include_erts: true
   set include_src: false
@@ -28,7 +23,7 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :api do
-  set version: current_version(:api)
+release :elixirhunt do
+  set version: current_version(:elixirhunt)
 end
 

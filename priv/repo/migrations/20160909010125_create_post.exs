@@ -1,4 +1,4 @@
-defmodule Api.Repo.Migrations.CreatePost do
+defmodule Elixirhunt.Repo.Migrations.CreatePost do
   use Ecto.Migration
 
   def change do

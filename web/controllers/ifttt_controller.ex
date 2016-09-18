@@ -1,5 +1,5 @@
-defmodule Api.IftttController do
-  use Api.Web, :controller
+defmodule Elixirhunt.IftttController do
+  use Elixirhunt.Web, :controller
 
   @doc """
   Layer to call the maker API of Ifttt

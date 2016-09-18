@@ -2,7 +2,7 @@ defmodule Api.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :api,
+    [app: :elixirhunt,
      name: "elixirhunt",
      version: "0.0.1",
      elixir: "~> 1.0",
@@ -18,7 +18,7 @@ defmodule Api.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Api, []},
+    [mod: {Elixirhunt, []},
      applications: [:phoenix, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :httpoison, :edeliver]]
   end
@@ -52,7 +52,6 @@ defmodule Api.Mixfile do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-     "ecto.reset": ["ecto.drop", "ecto.setup"],
-     "deploy": ["edeliver update --branch=0.1.0-dev"]]
+     "ecto.reset": ["ecto.drop", "ecto.setup"]]
   end
 end

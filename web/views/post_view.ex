@@ -1,12 +1,12 @@
-defmodule Api.PostView do
-  use Api.Web, :view
+defmodule Elixirhunt.PostView do
+  use Elixirhunt.Web, :view
 
   def render("index.json", %{posts: posts}) do
-    %{posts: render_many(posts, Api.PostView, "post.json")}
+    %{posts: render_many(posts, Elixirhunt.PostView, "post.json")}
   end
 
   def render("show.json", %{post: post}) do
-    %{post: render_one(post, Api.PostView, "post.json")}
+    %{post: render_one(post, Elixirhunt.PostView, "post.json")}
   end
 
   def render("post.json", %{post: post}) do

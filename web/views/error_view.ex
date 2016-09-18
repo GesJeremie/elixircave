@@ -1,5 +1,5 @@
-defmodule Api.ErrorView do
-  use Api.Web, :view
+defmodule Elixirhunt.ErrorView do
+  use Elixirhunt.Web, :view
 
   def render("404.json", _assigns) do
     %{errors: %{detail: "Page not found"}}

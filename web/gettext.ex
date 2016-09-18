@@ -1,4 +1,4 @@
-defmodule Api.Gettext do
+defmodule Elixirhunt.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
@@ -20,5 +20,5 @@ defmodule Api.Gettext do
 
   See the [Gettext Docs](http://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :api
+  use Gettext, otp_app: :elixirhunt
 end

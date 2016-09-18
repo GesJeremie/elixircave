@@ -1,5 +1,5 @@
-defmodule Api.Post do
-  use Api.Web, :model
+defmodule Elixirhunt.Post do
+  use Elixirhunt.Web, :model
 
   schema "posts" do
     field :title, :string
