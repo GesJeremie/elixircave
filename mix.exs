@@ -19,7 +19,7 @@ defmodule Api.Mixfile do
   def application do
     [mod: {Api, []},
      applications: [:phoenix, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httpoison]]
+                    :phoenix_ecto, :postgrex, :httpoison, :edeliver]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,8 +38,8 @@ defmodule Api.Mixfile do
      {:faker_elixir_octopus, "> 0.0.0", only: :dev},
      {:httpoison, "~> 0.9.0"},
      {:sshex, "2.1.0"},
-     {:distillery, ">= 0.8.0", warn_missing: false},
-     {:edeliver, ">= 1.4.0"}
+     {:edeliver, ">= 1.4.0"},
+     {:distillery, ">= 0.8.0", warn_missing: false}
     ]
   end
 
