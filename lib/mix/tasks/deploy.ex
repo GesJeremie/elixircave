@@ -10,9 +10,17 @@ defmodule Mix.Tasks.Deploy do
     Mix.Task.reenable("edeliver")
     Mix.Task.run("edeliver", ["deploy release to production --verbose"])
 
-    show("Restart app production ...")
+    show("Stop app production ...")
     Mix.Task.reenable("edeliver")
-    Mix.Task.run("edeliver", ["restart production"])
+    Mix.Task.run("edeliver", ["stop production"])
+
+    show("Migrate app production ...")
+    Mix.Task.reenable("edeliver")
+    Mix.Task.run("edeliver", ["migrate production"])
+
+    show("Start app production ...")
+    Mix.Task.reenable("edeliver")
+    Mix.Task.run("edeliver", ["start production"])
   end
 
 

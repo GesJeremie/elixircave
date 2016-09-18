@@ -10,5 +10,6 @@ defmodule Elixirhunt.Router do
 
     resources "/posts", PostController, except: [:new, :edit]
     get "/ifttt/maker", IftttController, :maker
+    get "/hello", PostController, :hello
   end
 end

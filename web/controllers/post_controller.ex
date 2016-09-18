@@ -5,6 +5,10 @@ defmodule Elixirhunt.PostController do
 
   plug :scrub_params, "post" when action in [:create, :update]
 
+  def hello(conn, _) do
+    text conn, "hello"
+  end
+
   def index(conn, _params) do
     posts = Repo.all(Post)
     render(conn, "index.json", posts: posts)
