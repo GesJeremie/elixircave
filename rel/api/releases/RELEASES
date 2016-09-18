@@ -33,5 +33,6 @@
            {mimerl,"1.0.2","./lib/mimerl-1.0.2"},
            {certifi,"0.4.0","./lib/certifi-0.4.0"},
            {ssl_verify_fun,"1.1.0","./lib/ssl_verify_fun-1.1.0"},
-           {metrics,"1.0.1","./lib/metrics-1.0.1"}],
+           {metrics,"1.0.1","./lib/metrics-1.0.1"},
+           {edeliver,"1.4.0","./lib/edeliver-1.4.0"}],
           permanent}].
