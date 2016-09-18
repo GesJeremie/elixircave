@@ -12,7 +12,7 @@ defmodule Mix.Tasks.Deploy do
     {:ok, conn} = SSHEx.connect(ip: @host_server, user: @host_user)
 
     # Deploy
-    conn |> deploy
+    #conn |> deploy
   end
 
   defp deploy(conn) do
