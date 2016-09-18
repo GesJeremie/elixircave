@@ -16,3 +16,5 @@ erl_crash.dump
 
 .DS_Store
 .deliver/releases/
+
+rel/api
