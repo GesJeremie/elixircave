@@ -13,7 +13,6 @@ erl_crash.dump
 
 # Deployment
 .deliver
-rel/
 
 .DS_Store
 .deliver/releases/
