@@ -5,7 +5,7 @@ defmodule Elixirhunt.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api/v1", Api do
+  scope "/api/v1", Elixirhunt do
     pipe_through :api
 
     resources "/posts", PostController, except: [:new, :edit]
