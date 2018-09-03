@@ -1,3 +1,5 @@
+> :skull: This project has been archived.
+
 # Elixirhunt
 
 This README outlines the details of collaborating on this Ember application.
